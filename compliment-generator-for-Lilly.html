@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliment Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #ff8c00;
+        }
+        #compliment {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff8c00;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ffa500;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey, Gorgeous!</h1>
+    <div id="compliment">Click the button to get a random compliment!</div>
+    <button onclick="generateCompliment()">Get Compliment</button>
+
+    <script>
+        const compliments = [
+            "Your smile lights up the room!",
+            "You're so thoughtful and caring!",
+            "You make everything better just by being here.",
+            "Your eyes are like magic.",
+            "I could spend forever just listening to you.",
+            "You're my favorite person to talk to, no matter what we're saying.",
+            "I love how you never give up, no matter what life throws at you.",
+            "You make life so much more fun.",
+            "You're beyond beautiful—inside and out!",
+            "Your laugh is my favorite sound.",
+            "You're the kind of person who makes my day without even trying."
+        ];
+
+        function generateCompliment() {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            document.getElementById("compliment").innerText = compliments[randomIndex];
+        }
+    </script>
+</body>
+</html>
